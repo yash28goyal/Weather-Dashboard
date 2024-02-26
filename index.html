@@ -24,14 +24,14 @@
     <div class="fluid-container">
         <div class="header box">
             <div class="row">
-                <div class="col-lg-4 Logo p-4">
+                <div class="col-lg-4 Logo">
                     <div class="logocontain flex justify-content pr-5">
                         <img class="logo" src="images/logo.png" width="300" height="50" alt="abc">
                         <button onclick="fetchlocation()" class="location-2-hidden"><i class="fa-solid fa-location-crosshairs"></i></button>
                     </div>
                 </div>
-                <div class="search col-lg-4 flex p-4">
-                    <input id="searchbar" type="text" name="search" class="search-item" placeholder="Enter the City.....">
+                <div class="search col-lg-4 flex">
+                    <input id="searchbar" type="text" name="search" class="search-item" placeholder="Enter the City....." >
                     <button id="searchbtn" class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div class="col-lg-4 current-location p-5 flex">
@@ -53,13 +53,12 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="col-lg m-4 p-5 upperleft">
-                            <p>Now</p>
+                            <h2>Now</h2>
                             <div class="livedata img-temp flex justify-content">
                                 <h4 class="temp" id="temp"></sup></h4>
                                 <span><img id="icon" class="wheather-icon" src="" alt="a"></span>
                             </div>
-                            <p class="imagetext" id="text">Broken Clouds</p>
-                            <!-- <hr style="background-color: #fff;"> -->
+                            <p class="imagetext" id="text"></p>
                             <span class="flex justify-content3"><i class="fa-regular fa-calendar"></i><p class="datecurrent" id="currentdate"></p></span>
                             <span class="flex justify-content3"><i class="fa-solid fa-location-dot"></i><p class="locationcurrent" id="currentcity"></p></span>
                         </div>

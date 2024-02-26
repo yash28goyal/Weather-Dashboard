@@ -54,7 +54,7 @@ async function checkWeather(City){
             
             const D = new Date();
             currentcity.innerText=data.location.name + ", " + data.location.region + ", " + data.location.country;
-            currentdate.innerHTML=data.current.last_updated.split(" ")[0] +  " ," + arrayvalue[D.getDay()] +"<br>"+  " Time: " +  data.current.last_updated.split(" ")[1] ;
+            currentdate.innerHTML=data.current.last_updated.split(" ")[0] +  " ," + arrayvalue[D.getDay()] +"<br>"+  " Update At: " +  data.current.last_updated.split(" ")[1] ;
             
             sunrise.innerText=data.forecast.forecastday[0].astro.sunrise;
             sunset.innerText=data.forecast.forecastday[0].astro.sunset;
@@ -67,7 +67,7 @@ async function checkWeather(City){
             speed.innerText=data.current.wind_kph + 'Km/hr';
 
             console.log(data);
-
+            hourly_display.innerHTML="";
             var hourly_data = data.forecast.forecastday[0].hour;
             hourly_data.map((data)=>{
                 const temporary = document.createElement(`div`);
