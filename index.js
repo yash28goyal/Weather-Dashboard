@@ -26,10 +26,11 @@ const searchbar = document.getElementById("searchbar");
 const searchbtn = document.getElementById("searchbtn");
 
 const hourly_display = document.getElementById("hourly_display");
+const multi_forcast = document.getElementById("Multi-forcast");
 
 async function checkWeather(City){
     try {
-        const response = await fetch(apiUrl + apikey + "&q=" + City);
+        const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
         const data = await response.json();
         
             waitLoc.style.display="block";
@@ -66,7 +67,7 @@ async function checkWeather(City){
             gust.innerText=data.current.gust_kph + 'Km/hr'; 
             speed.innerText=data.current.wind_kph + 'Km/hr';
 
-            console.log(data);
+            // console.log(data);
             hourly_display.innerHTML="";
             var hourly_data = data.forecast.forecastday[0].hour;
             hourly_data.map((data)=>{
@@ -80,7 +81,23 @@ async function checkWeather(City){
                 <h5>Chance of Snow : <span id="snow">${data.chance_of_snow}</span></h5>
                 </div>`;
                 hourly_display.appendChild(temporary);
-
+            })
+            multi_forcast.innerHTML="";
+            var multi_data = data.forecast.forecastday;
+            multi_data.map((data)=>{
+                const temporary = document.createElement(`div`);
+                temporary.innerHTML=`<div class="flex justify-content mt-1">
+                <p>${
+                (window.screen.width>370)?
+                data.date.slice(8,10)+'-'+data.date.slice(5,7)+'-'+data.date.slice(0,4):data.date.slice(8,10)+'-'+data.date.slice(5,7)}</p>
+                <div class="img-temp flex">
+                <p>${(window.screen.width>370)?
+                    data.day.condition.text:data.day.condition.text.slice(0,15)+'...'
+                }</p>
+                <img src="${data.day.condition.icon}" alt="abc" width="30" height="30">
+                </div>
+                </div>`
+                multi_forcast.appendChild(temporary);
             })
         }, 1000);
 

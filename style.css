@@ -242,12 +242,20 @@ sub,sup{
         font-size: 15px;
     }
 }
-@media screen and (max-width: 990px){
+@media screen and (max-width:1380px) {
+    .img-temp p{
+        display: none;
+    }
+}
+@media screen and (max-width: 991px){
     .temp{
         font-size: 5rem;
     }
     .livedata{
         padding-inline: 10rem;
+    }
+    .img-temp p{
+        display: block;
     }
 }
 @media (max-width:991.5px){
