@@ -91,7 +91,7 @@ async function checkWeather(City){
                 (window.screen.width>370)?
                 data.date.slice(8,10)+'-'+data.date.slice(5,7)+'-'+data.date.slice(0,4):data.date.slice(8,10)+'-'+data.date.slice(5,7)}</p>
                 <div class="img-temp flex">
-                <p>${(window.screen.width>370)?
+                <p>${(window.screen.width>425 && window.screen.width<1380)?
                     data.day.condition.text:data.day.condition.text.slice(0,15)+'...'
                 }</p>
                 <img src="${data.day.condition.icon}" alt="abc" width="30" height="30">
