@@ -125,8 +125,8 @@ function fetchlocation(){
 checkWeather("sri ganganagar");
 
 const logindata = document.getElementById("logindata");
-if(sessionStorage.getItem("name")!=""){
-logindata.innerText = sessionStorage.getItem("name").toUpperCase();
-}else{
+if( sessionStorage.getItem("name") ){
+    logindata.innerText = sessionStorage.getItem("name").toUpperCase();
+}else{  
     logindata.innerText = "Login-Signup";
 }
