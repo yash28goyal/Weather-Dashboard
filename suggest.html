@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place in India To Visit</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --background: #131214;
+            --surface: #1D1C1F;
+            --on-surface: #DDDAE5;
+        }
+        body{
+            /* background-image: url(images/backgroundforweb.jpg); */
+            background-color: var(--background);
+            /* background: #121212; */
+            font-family: 'Nunito Sans', sans-serif;
+            color: var(--on-surface);
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        .heading{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            height: 10%;
+            text-decoration: underline;
+        }
+        .contain-data{
+            height: 90%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 20px;
+            
+        }
+        .contain-data-child{
+            background-color: var(--surface);
+            border-radius: 15px;
+            box-shadow: 0px 0px 100px rgb(18, 17, 17);
+            padding: 20px;
+            margin: 10px;
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .contain-data-child img{
+            height: 100px;
+            width: 100px;
+        }
+        .marginleft{
+            margin-left: 30px;
+        }
+        .close{
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #121212f1;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            font-size: 20px;
+            color: var(--on-surface);
+            cursor: pointer;
+        }
+        .close:hover{
+            background-color: #0a0a0a;
+            scale: 1.1;
+        }
+        @media (max-width:1600px){
+            .marginleft{
+                margin-left: 10px;
+            }
+        }
+        @media (max-width: 1075px){
+            .contain-data{
+            grid-template-columns: repeat(2,1fr);
+            }
+            .contain-data-child{
+                height: 570px;
+                width: 440px;
+            }
+        }
+        @media (max-width: 954px){
+            .contain-data-child{
+                height: 100%;
+                width: 90%
+            }
+        }
+        @media (max-width:800px){
+            h2{
+                font-size: 1.25em;
+            }
+        }
+        @media (max-width: 730px){
+            .heading h1{
+                font-size: 1.5rem;
+            }
+            .heading button{
+                width: 30px;
+                height: 30px;
+                font-size: 15px;
+                top: 50px;
+                left: 20px;
+            }
+            .contain-data{
+                grid-template-columns: 1fr;
+                padding-left: 0px;
+                gap: 20px;
+            }
+            .contain-data-child{
+                width: 100%;
+                height: 100%;
+            }
+            .marginleft{
+                margin-left: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <button class="close" onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </button>
+            <h1>Places For Visit In India.</h1>
+        </div>
+        <div class="contain-data">
+            <div class="contain-data-child marginleft">
+                <h1>Shimla</h1>
+                <img src="images/sun.png" alt="afaf" id="img1">
+                <h2>temperature : <span id="temp1">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Summer (March to June): This is considered the peak tourist season in Shimla. The weather during these months is pleasant with temperatures ranging from 15°C to 30°C (59°F to 86°F).</p>
+                <p>Autumn (October to November):In Autumn visit Shimla when the weather remains pleasant with temperatures ranging from 10°C to 25°C (50°F to 77°F).</p>
+            </div>
+            <div class="contain-data-child">
+                <h1>Manali</h1>
+                <img src="images/sun.png" alt="afaf" id="img2">
+                <h2>temperature : <span id="temp2">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Summer (March to June): Like Shimla, summer is the peak tourist season in Manali. During these months, the weather is pleasant with temperatures ranging from 10°C to 25°C (50°F to 77°F).</p>
+                <p>Autumn (October to November): Autumn is another favorable time to visit Manali when the weather remains pleasant and the monsoon recedes. Temperatures range from 5°C to 20°C (41°F to 68°F).</p>
+            </div>
+            <div class="contain-data-child marginleft">
+                <h1>Kashmir</h1>
+                <img src="images/sun.png" alt="afaf" id="img3">
+                <h2>temperature : <span id="temp3">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Spring (March to May): Spring is a lovely time to visit Kashmir when the valley is in full bloom with colorful flowers, particularly the famous tulips in April. The weather during this season is mild and pleasant, with temperatures ranging from 10°C to 20°C (50°F to 68°F).</p>
+                <p>Summer (June to August): Summer in Kashmir is relatively warm with temperatures ranging from 15°C to 30°C (59°F to 86°F).</p>
+                <p>Autumn (September to November): The weather remains pleasant, with temperatures ranging from 10°C to 25°C (50°F to 77°F). </p>
+            </div>
+            <div class="contain-data-child">
+                <h1>Kedarnath</h1>
+                <img src="images/sun.png" alt="afaf" id="img4">
+                <h2>temperature : <span id="temp4">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Summer (May to June): Summer is the primary tourist season in Kedarnath. During this time, the weather is generally mild and pleasant with temperatures ranging from 5°C to 20°C (41°F to 68°F). </p>
+                <p>Autumn (October to November): Autumn is another good time to visit Kedarnath when the weather is cool and pleasant. The temperatures range from 0°C to 15°C (32°F to 59°F).</p>
+            </div>
+            <div class="contain-data-child marginleft">
+                <h1>Kerala</h1>
+                <img src="images/sun.png" alt="afaf" id="img5">
+                <h2>temperature : <span id="temp5">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Winter (October to February): Winter is considered the best time to visit Kerala as the weather is pleasant and relatively cooler. Temperatures range from 20°C to 32°C (68°F to 90°F).</p>
+                <p>Summer (March to May): Kerala experiences hot and humid weather during the summer months. Temperatures can soar above 35°C (95°F) in some regions.</p>
+            </div>
+            <div class="contain-data-child">
+                <h1>Goa</h1>
+                <img src="images/sun.png" alt="afaf" id="img6">
+                <h2>temperature : <span id="temp6">6&deg;C</span></h2>
+                <p>Best Time To Visit:-</p>
+                <p>Winter (November to February): Winter is considered the best time to visit Goa as the weather is pleasant and relatively cooler. Temperatures range from 20°C to 30°C (68°F to 86°F).</p>
+                <p>Summer (March to May): Goa experiences hot and humid weather during the summer months. Temperatures can soar above 35°C (95°F).</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const img3 = document.getElementById("img3");
+        const img4 = document.getElementById("img4");
+        const img5 = document.getElementById("img5");
+        const img6 = document.getElementById("img6");
+        const temp1 = document.getElementById("temp1");
+        const temp2 = document.getElementById("temp2");
+        const temp3 = document.getElementById("temp3");
+        const temp4 = document.getElementById("temp4");
+        const temp5 = document.getElementById("temp5");
+        const temp6 = document.getElementById("temp6");
+
+        const apikey = "4112440673a248cda1d72538241003";
+        const apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=";
+        async function checkWeather1(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp1.innerText = data.current.temp_c + "°C";
+            img1.src = data.current.condition.icon
+        }
+        checkWeather1("Shimla")
+        async function checkWeather2(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp2.innerText = data.current.temp_c + "°C";
+            img2.src = data.current.condition.icon
+        }
+        checkWeather2("Manali")
+        async function checkWeather3(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp3.innerText = data.current.temp_c + "°C";
+            img3.src = data.current.condition.icon
+        }
+        checkWeather3("Kashmir india")
+        async function checkWeather4(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp4.innerText = data.current.temp_c + "°C";
+            img4.src = data.current.condition.icon
+        }
+        checkWeather4("Kedarnath")
+        async function checkWeather5(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp5.innerText = data.current.temp_c + "°C";
+            img5.src = data.current.condition.icon
+        }
+        checkWeather5("Kerala")
+        async function checkWeather6(City){
+            const response = await fetch(apiUrl + apikey + "&q=" + City +"&days=6");
+            const data = await response.json();
+            // console.log(data);
+            temp6.innerText = data.current.temp_c + "°C";
+            img6.src = data.current.condition.icon
+        }
+        checkWeather6("Goa")
+    </script>
+</body>
+</html>

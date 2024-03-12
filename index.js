@@ -1,4 +1,4 @@
-const apikey = "80398a865ba345028f955310242502";
+const apikey = "4112440673a248cda1d72538241003";
 const apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=";
 
 const arrayvalue = ["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"];
@@ -67,12 +67,12 @@ async function checkWeather(City){
             gust.innerText=data.current.gust_kph + 'Km/hr'; 
             speed.innerText=data.current.wind_kph + 'Km/hr';
 
-            // console.log(data);
+            console.log(data);
             hourly_display.innerHTML="";
             var hourly_data = data.forecast.forecastday[0].hour;
             hourly_data.map((data)=>{
                 const temporary = document.createElement(`div`);
-                temporary.innerHTML=`<div class="contain-hourly-data-child p-2 color2 flex2 vertical-align">
+                temporary.innerHTML=`<div class="contain-hourly-data-child color2 vertical-align">
                 <img src="${data.condition.icon}" alt="" height="100" width="100">
                 <h2>${data.condition.text}</h2>
                 <h2>${data.temp_c} &deg;c</h2>
@@ -123,3 +123,10 @@ function fetchlocation(){
 }
 
 checkWeather("sri ganganagar");
+
+const logindata = document.getElementById("logindata");
+if(sessionStorage.getItem("name")!=""){
+logindata.innerText = sessionStorage.getItem("name").toUpperCase();
+}else{
+    logindata.innerText = "Login-Signup";
+}

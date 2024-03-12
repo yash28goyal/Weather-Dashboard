@@ -1,8 +1,8 @@
 :root{
     /*background and font color*/
     --background: #131214;
-    --on-background: #EAE6F2;
     --surface: #1D1C1F;
+    --on-background: #EAE6F2;
     --on-surface: #DDDAE5;
     --primary: #B5A1E5; 
     /*font sizes*/
@@ -17,7 +17,7 @@
     /* Shadow */
     --shadow-1: 0px 0px 20px hsla(0, 2%, 19%, 0.5);
     --shadow-2: 0px 0px 20px hsla(0, 5%, 20%, 0.4);
-    --outline: #3e3d4049;
+    --outline: #3e3d40;
 }
 *{
     margin: 0;
@@ -30,6 +30,9 @@ body{
     width: 100%;
     overflow-x: hidden;
     background-color: var(--background);
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    /* background-image: linear-gradient(to right top, #4d8d8c, #438180, #397574, #2f6968, #255e5d); */
+    /* background-image: url(images/backgroundforweb.jpg); */
     color: var(--on-background);
     font-size: var(--body-3);
 }
@@ -91,7 +94,7 @@ html{
     margin-top: 10px;
     border-radius: 25px;
     padding: 10px 15px;
-    background: var(--outline);
+    background: var(--surface);
     outline: 0;
     width: 2500px;
     height: 50px;
@@ -108,11 +111,27 @@ input::selection{
 }
 .containlocation:hover{
     cursor: pointer;
+    color: palegoldenrod;
+}
+.login{
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+}
+.loginuser{
+    /* border: 1px solid white;
+    padding: 5px;*/
+    border-radius: 10px; 
+}
+.loginuser:hover{
     scale: 0.9;
+    color: #86FBF9;
+    /* background-color: #916aed; */
+    /* border: 1px solid black; */
 }
 .current-location{
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #916aed;
 }
 .current-location i{
@@ -143,10 +162,16 @@ input::selection{
 .Logo{
     padding: 1.5rem;
 }
-.location-2-hidden{font-size: 30px; color: #B5A1E5;align-items: flex-end; padding-right: 2.5rem;display: none;}
-.location-2-hidden:hover{
+.user-2-hidden{font-size: 30px; color: #B5A1E5;align-items: flex-end; padding-right: 2.5rem;display: none;}
+.user-2-hidden i{
+    position: relative;
+    left: 45%;
+}
+.user-2-hidden:hover{
     scale: 0.9;
-    color: #916aed;
+    color: white;
+    background-color: #916aed;
+    /* border: 2px solid white; */
 }
 input{
     display: block;
@@ -172,7 +197,7 @@ sub,sup{
 }
 .color1{
     margin-bottom: 10px;
-    background-color: var(--outline);
+    background-color: var(--surface);
     border-radius: var(--radius-28);
     box-shadow: var(--shadow-2);
 }
@@ -230,6 +255,8 @@ sub,sup{
 .contain-hourly-data-child{
     width: 200px;
     height: 100%;
+    padding: .5rem;
+    display: flex;flex-direction: column;gap: 12px;
 }
 @media (max-width:1200px){
     .temp{
@@ -247,7 +274,15 @@ sub,sup{
         display: none;
     }
 }
+@media screen and (max-width:1200px){
+    .contain-hourly-data-child h2{
+        font-size: 1em;
+    }
+}
 @media screen and (max-width: 991px){
+    .login{
+        display: none;
+    }
     .temp{
         font-size: 5rem;
     }
@@ -259,10 +294,7 @@ sub,sup{
     }
 }
 @media (max-width:991.5px){
-    .current-location{
-        display: none;
-    }
-    .location-2-hidden{
+    .user-2-hidden{
         display: block;
     }
 }
@@ -290,6 +322,7 @@ sub,sup{
     .contain-hourly-data-child{
         width: 170px;
         height: 270px;
+        gap: 0px;
     }
     .contain-hourly-data-child h2{
         font-size: 1.5rem;
@@ -330,6 +363,11 @@ sub,sup{
     .search-item{
         margin-left: 10px;
         padding-top: 0px;
+    }
+    .user-2-hidden{font-size: 20px; color: #B5A1E5;align-items: flex-end; padding-right: 2.5rem;display: block;}
+    .user-2-hidden i{
+        position: relative;
+        left: 65%;
     }
 }
 @media  (max-width:376px) {
