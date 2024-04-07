@@ -1,4 +1,5 @@
-const apikey = "4112440673a248cda1d72538241003";
+// const apikey = "4112440673a248cda1d72538241003";
+const apikey = "88ea22abd5c84c0b807152931240704";
 const apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=";
 
 const arrayvalue = ["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"];
